@@ -1,0 +1,135 @@
+
+
+$colors:(
+  font-color: white,
+  bg-color: #040440,
+  input-bg-color: #0e0e81,
+  info-color: rgb(231, 231, 231),
+  submit-btn-color: orange,
+  submit-btn-arrow: white,
+  placeholder-color: white,
+);
+
+
+.contact{
+  padding: 50px 0;
+  .wrapper{
+      background: map-get($map: $colors, $key: bg-color);
+      color: map-get($map: $colors, $key: font-color);
+      margin: 0px auto;
+      width: 90%;
+      padding: 50px 30px ;
+      box-sizing: border-box;
+      border-radius: 10px;
+      max-width: 900px;
+    form{
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .info{
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+        color: map-get($map: $colors, $key: info-color);
+      }
+      .input-area{
+        position: relative;
+          background: map-get($map: $colors, $key: input-bg-color);
+         padding: 5px 10px;
+         padding-right: 5px;
+         display: flex;
+         align-items: center;
+         border-radius: 10px;
+         transition: transform 200ms linear;
+        input[type = text]{
+          color: white;
+          border-radius: 10px;
+          background: none;
+          border: none;
+          outline: none;
+          padding-right: 20px;
+         
+          padding: 10px;
+        }
+        ::placeholder{
+          color: map-get($map: $colors, $key: placeholder-color);
+        }
+        button{
+     
+          border-radius: 50%;
+          display: flex;
+          width: 40px;
+          height: 40px;
+          outline: none;
+          align-items: center;
+          justify-content: center;
+          border:none;
+          background-color: map-get($map: $colors, $key: submit-btn-color);
+          .arrow{
+            display: block;
+            font-size: 1rem;
+             color: map-get($map: $colors, $key: submit-btn-arrow);
+            width: 15px;
+            fill: map-get($map: $colors, $key: submit-btn-arrow);
+          }
+        
+        }
+      }
+      .input-area:hover{
+        transform: scale(1.05);
+
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .contact{
+    padding-bottom: 100px;
+    .wrapper{
+      border-radius: 20px;
+     
+      form{
+        .title{
+          font-size: 2rem;
+        }
+        .input-area{
+          width:400px;
+          justify-content: space-between;
+          input[type = text]{
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 992px){
+    .contact{
+    .wrapper{
+   
+     
+      form{
+        .title{
+          font-size: 2.2rem;
+          margin-bottom: 30px;
+        }
+        .input-area{
+          width:400px;
+          justify-content: space-between;
+          input[type = text]{
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}

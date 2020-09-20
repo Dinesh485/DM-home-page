@@ -1,0 +1,87 @@
+
+$colors: (
+  font-color: rgb(59, 59, 59),
+  quote-color: blue,
+  carousal-btn: blue,
+);
+.testamonials{
+  padding: 50px 0;
+  .wrapper{
+    max-width: 950px;
+    margin: 0 auto;
+     .carousal{
+      .review-card{
+      width: 240px;
+      height: 290px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin : 50px auto;
+         
+          text-align: center;
+          padding: 0px 10px 30px 10px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgb(145, 145, 145);
+          color: map-get($map: $colors, $key: font-color);
+      .customer-img{
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 3px solid white;
+        box-shadow: 0px 0px 3px  rgb(110, 110, 110);
+
+        position: absolute;
+        z-index: 10;
+        transform: translateY(-50%);
+
+         img{
+           width: 100%;
+         }
+      }
+      .name{
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 50px 0 0px 0;
+        text-transform: capitalize;
+      }
+      .location{
+        text-transform: capitalize;
+        font-size: 0.9rem;
+      }
+      .testamony{
+         font-size: 0.9rem;
+         padding: 20px 20px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+          p{
+          height: 110px;
+          overflow: hidden;
+          width: 90%;
+          }
+        .quote{
+         display: block;
+          margin: 5px;
+          fill: map-get($map: $colors, $key: quote-color);
+        }
+        .quote-top{
+          align-self: flex-start;
+        }
+        .quote-bottom{
+          align-self: flex-end;
+          transform: rotate(180deg)
+        }
+        
+      }
+    }
+   }
+  }
+  .slick-next:before, .slick-prev::before{
+  color: map-get($map: $colors, $key: carousal-btn) ;
+}
+}
+
+
+

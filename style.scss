@@ -1,0 +1,14 @@
+@import './sass-partials/banner';
+@import './sass-partials/work';
+@import './sass-partials/contact';
+@import './sass-partials/footer';
+@import './sass-partials/about';
+@import './sass-partials/testemonials';
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+}

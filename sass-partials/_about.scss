@@ -1,0 +1,257 @@
+
+
+$colors:(
+  about-us-banner-bg: url(./images/about-images/Bullseye-Gradient.svg),
+  about-us-banner-font-color: white,
+  about-us-caption-color: rgb(216, 216, 216),
+  about-us-btn-color: blue,
+  about-us-info-bg: white,
+);
+.about-us{
+  position: static;
+  .about-us-banner{
+    background: map-get($map: $colors, $key: about-us-banner-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    .wrapper{
+      width: 80%;
+      max-width: 1200px;
+      color: map-get($map: $colors, $key: about-us-banner-font-color );
+      margin: 0 auto;
+      .title{
+        font-size: 2.2rem;
+        font-weight: 500;
+        margin: 20px 0;
+        
+      }
+      .caption{
+        font-size: 1rem;
+        color: map-get($map: $colors, $key: about-us-caption-color);
+        margin: 30px 0;
+      }
+      .links{
+        display: flex;
+        font-size: 0.9rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        a{
+          margin: 10px 0;
+          padding: 15px 20px;
+          margin-right: 20px;
+          border-radius: 5px;
+          width: fit-content;
+          display: block;
+        }
+        .learn-more{
+          background: map-get($map: $colors, $key: about-us-btn-color);
+          border: 1px solid map-get($map: $colors, $key: about-us-btn-color);
+        }
+        .discover{
+          border: 1px solid white;
+        }
+      }
+    }
+  }
+  .about-us-info{
+    background: map-get($map: $colors, $key: about-us-info-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0;
+
+    .wrapper{
+      width: 80%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      .founder-card{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 2px 2px 15px  rgb(192, 192, 192);
+        padding: 30px 20px;
+        border-radius: 5px;
+        margin-bottom: 50px;
+        .img{
+          width: 70px;
+          height: 70px;
+          border: 5px solid rgb(253, 242, 220);
+          border-radius: 50%;
+        }
+        .description{
+          color: gray;
+          margin: 20px 0;
+        }
+       .founder-info{
+          .name{
+          font-weight: 500;
+          font-size: 1.1rem;
+          margin: 10px 0; 
+        }
+       }
+      }
+      .info{
+        .category{
+          text-transform: uppercase;
+          font-weight: 300;
+          color: gray;
+          margin-bottom: 20px;
+          font-size: 1.3rem;
+        }
+        .title{
+          font-size: 2.5rem;
+          font-weight: 500;
+          margin-bottom: 20px;
+          span{
+              font-family: 'Satisfy', cursive;
+              font-weight: bold;
+              color: map-get($map: $colors, $key: about-us-btn-color);
+          }
+        }
+          .links{
+        display: flex;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        a{
+          margin: 10px 0;
+          padding: 15px 20px;
+          margin-right: 20px;
+          border-radius: 5px;
+          width: fit-content;
+          display: block;
+        }
+        .read-more{
+          background: map-get($map: $colors, $key: about-us-btn-color);
+          border: 1px solid map-get($map: $colors, $key: about-us-btn-color);
+          color: white;
+        }
+        .contact-us{
+          border: 1px solid map-get($map: $colors, $key: about-us-btn-color);
+          color:  map-get($map: $colors, $key: about-us-btn-color);
+        }
+      }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width : 768px){
+  .about-us{
+    .about-us-banner{
+      .wrapper>div{
+        width: 80%;
+      }
+    }
+    .about-us-info{
+    padding: 70px 0;
+  }
+  }
+  
+}
+@media only screen and (min-width : 992px){
+  .about-us{
+    .about-us-banner{
+      padding: 70px 0;
+      .wrapper{
+        .title{
+          font-size: 2.5rem;
+        }
+        .links{
+          flex-direction: row;
+        }
+       
+      }
+    }
+    .about-us-info{
+      padding: 100px 0;
+      .wrapper{  
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      .founder-card{
+        
+        width: 330px;
+       min-height: 450px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding: 40px 20px;
+        margin-bottom: 0;
+        .description{
+          font-size: 1.2rem;
+        }
+        .founder-info{
+          .name{
+          margin-bottom: 5px;
+
+        }
+        }
+      }
+      .info{
+        width: 50%;
+        max-width: 600px;
+      }
+      }
+    }
+  }
+}
+@media only screen and (min-width : 1200px){
+  .about-us{
+    .about-us-banner{
+      padding: 100px 0;
+      .wrapper>div{
+        width: 50%;
+      }
+      .wrapper{
+
+        .title{
+          font-size: 3rem;
+        }
+        .caption{
+          margin-bottom: 50px;
+          font-size: 1.2rem;
+        }
+        
+      }
+    }
+    .about-us-info{
+      padding: 150px 0;
+      .wrapper{
+         .founder-card{
+           width: calc(330px*(1.1));
+           min-height: calc(450px*(1.1));
+           .img{
+             width: 90px;
+             height: 90px;
+           }
+           .founder-info{
+             .name{
+               font-size: 1.3rem;
+             }
+           }
+         }
+         .info{
+           .category{
+             font-size: 1.5rem;
+             margin-bottom: 40px;
+           }
+           .title{
+             font-size: 3.8rem;
+             line-height: 0.9;
+             margin-bottom: 30px;
+           }
+           .description{
+             font-size: 1.1rem;
+             line-height: 1.6;
+           }
+         }
+      }
+    }
+  }
+}
