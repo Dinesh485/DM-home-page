@@ -1,9 +1,9 @@
 
 
 $colors:(
-  banner-bg: url('../images/banner-images/Endless-Constellation.svg'),
-  accent-color1: rgb(40, 175, 253),
-  accent-color2: rgb(228, 3, 216),
+  banner-bg: #1a1a2e,
+  accent-color1:#e94560,
+  accent-color2:#e94560,
   banner-font-color: white,
   menu-btn-color: white,
   banner-discription-color: rgb(204, 204, 204),
@@ -121,6 +121,9 @@ nav{
 /*banner */
 .banner{
    background: colors(banner-bg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat ;
   color: colors(banner-font-color);
   padding: 80px 0;
   position: relative;
@@ -169,6 +172,12 @@ nav{
           align-items: center;
           margin: 15px 10px;
              .play-btn{
+               box-shadow: 0 0 0 0px gray;
+               animation-name: expand;
+               animation-iteration-count: infinite;
+               animation-duration: 1500ms;
+               animation-timing-function: ease-out;
+              
                img{
                  width: 15px;
                }
@@ -179,6 +188,17 @@ nav{
                display: flex;
                align-items: center;
                justify-content: center;
+             }
+             @keyframes expand{
+               0%{
+                 box-shadow:  0 0 0 0px gray;
+               }
+               50%{
+                 box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+               }
+               100%{
+                  box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+               }
              }
              span{
                margin-left: 20px;
@@ -213,7 +233,7 @@ nav{
 }
 
 .wave .shape-fill {
-    fill: #FFFFFF;
+    fill: #fdfbfb;
 }
 
 

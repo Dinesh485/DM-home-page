@@ -1,7 +1,7 @@
 
 $colors: (
   font-color: whitesmoke,
-  bg: #0f3460,
+  bg: #1a1a2e,
 );
 
 .footer {
@@ -29,6 +29,7 @@ $colors: (
         a{
           text-decoration: underline;
           color: rgba(216, 216, 216, 0.822);
+          cursor: pointer;
         }
       }
     }

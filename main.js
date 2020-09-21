@@ -10,7 +10,8 @@ $(document).ready(() => {
   });
 
   $(".input-area").click(function () {
-    $(this).css({ transform: "scale(1.05)" });
+    $(this).css({ transform: "scale(1.05)", "box-shadow": "0 0 10px #e94560" });
+
   });
 });
 

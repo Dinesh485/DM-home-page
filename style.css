@@ -4,7 +4,7 @@ nav {
   width: 100%;
   top: 0;
   left: 0;
-  background: url("../images/banner-images/Endless-Constellation.svg");
+  background: #1a1a2e;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,8 +136,8 @@ nav .wrapper .menu li a {
 }
 
 nav .wrapper .menu li .demo-btn {
-  background: -webkit-gradient(linear, left top, right top, from(#28affd), to(#e403d8));
-  background: linear-gradient(to right, #28affd, #e403d8);
+  background: -webkit-gradient(linear, left top, right top, from(#e94560), to(#e94560));
+  background: linear-gradient(to right, #e94560, #e94560);
   border-radius: 35px;
   padding: 20px 40px;
   color: white;
@@ -151,7 +151,10 @@ nav .wrapper .menu-animation {
 
 /*banner */
 .banner {
-  background: url("../images/banner-images/Endless-Constellation.svg");
+  background: #1a1a2e;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   padding: 80px 0;
   position: relative;
@@ -174,7 +177,7 @@ nav .wrapper .menu-animation {
 .banner .banner-content .title {
   font-family: 'Satisfy', cursive;
   font-size: 1.7em;
-  color: #28affd;
+  color: #e94560;
 }
 
 .banner .banner-content .caption {
@@ -202,8 +205,8 @@ nav .wrapper .menu-animation {
 }
 
 .banner .banner-content .links .demo-btn {
-  background: -webkit-gradient(linear, left top, right top, from(#28affd), to(#e403d8));
-  background: linear-gradient(to right, #28affd, #e403d8);
+  background: -webkit-gradient(linear, left top, right top, from(#e94560), to(#e94560));
+  background: linear-gradient(to right, #e94560, #e94560);
   border-radius: 35px;
   padding: 15px 30px;
   color: white;
@@ -225,6 +228,16 @@ nav .wrapper .menu-animation {
 }
 
 .banner .banner-content .links .video .play-btn {
+  -webkit-box-shadow: 0 0 0 0px gray;
+          box-shadow: 0 0 0 0px gray;
+  -webkit-animation-name: expand;
+          animation-name: expand;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
   padding: 20px;
   border-radius: 50%;
   background: rgba(92, 92, 92, 0.637);
@@ -244,6 +257,36 @@ nav .wrapper .menu-animation {
 
 .banner .banner-content .links .video .play-btn img {
   width: 15px;
+}
+
+@-webkit-keyframes expand {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px gray;
+            box-shadow: 0 0 0 0px gray;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+            box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+            box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+  }
+}
+
+@keyframes expand {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px gray;
+            box-shadow: 0 0 0 0px gray;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+            box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+            box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+  }
 }
 
 .banner .banner-content .links .video span {
@@ -275,7 +318,7 @@ nav .wrapper .menu-animation {
 }
 
 .banner .wave .shape-fill {
-  fill: #FFFFFF;
+  fill: #fdfbfb;
 }
 
 @media (max-width: 767px) {
@@ -428,6 +471,7 @@ nav .wrapper .menu-animation {
 
 .our-work {
   padding: 80px 0;
+  background: #fdfbfb;
 }
 
 .our-work .wrapper {
@@ -440,6 +484,7 @@ nav .wrapper .menu-animation {
 }
 
 .our-work .wrapper .work-card {
+  color: white;
   width: 250px;
   height: 370px;
   border-radius: 10px;
@@ -460,11 +505,11 @@ nav .wrapper .menu-animation {
 
 .our-work .wrapper .work-card .description {
   font-size: 0.8rem;
-  color: gray;
+  color: #c7c7c7;
 }
 
 .our-work .wrapper .work-card .btn {
-  background: black;
+  background: #e94560;
   color: white;
   position: absolute;
   padding: 10px 20px;
@@ -472,6 +517,18 @@ nav .wrapper .menu-animation {
   left: 20px;
   border-radius: 25px;
   font-size: 0.7rem;
+}
+
+.our-work .wrapper .work-card:nth-child(even) {
+  color: black;
+}
+
+.our-work .wrapper .work-card:nth-child(even) .description {
+  color: black;
+}
+
+.our-work .wrapper .work-card:last-child {
+  color: white;
 }
 
 @media only screen and (min-width: 576px) {
@@ -536,10 +593,11 @@ nav .wrapper .menu-animation {
 
 .contact {
   padding: 50px 0;
+  background: #fdfbfb;
 }
 
 .contact .wrapper {
-  background: #040440;
+  background: #1a1a2e;
   color: white;
   margin: 0px auto;
   width: 90%;
@@ -548,6 +606,8 @@ nav .wrapper .menu-animation {
           box-sizing: border-box;
   border-radius: 10px;
   max-width: 900px;
+  -webkit-box-shadow: 0 0 10px rgba(56, 56, 56, 0.685);
+          box-shadow: 0 0 10px rgba(56, 56, 56, 0.685);
 }
 
 .contact .wrapper form {
@@ -579,7 +639,7 @@ nav .wrapper .menu-animation {
 
 .contact .wrapper form .input-area {
   position: relative;
-  background: #0e0e81;
+  background: #1a1a2e;
   padding: 5px 10px;
   padding-right: 5px;
   display: -webkit-box;
@@ -593,6 +653,7 @@ nav .wrapper .menu-animation {
   transition: -webkit-transform 200ms linear;
   transition: transform 200ms linear;
   transition: transform 200ms linear, -webkit-transform 200ms linear;
+  border: 2px solid #e94560;
 }
 
 .contact .wrapper form .input-area input[type=text] {
@@ -636,7 +697,8 @@ nav .wrapper .menu-animation {
       -ms-flex-pack: center;
           justify-content: center;
   border: none;
-  background-color: orange;
+  background-color: #e94560;
+  cursor: pointer;
 }
 
 .contact .wrapper form .input-area button .arrow {
@@ -650,11 +712,13 @@ nav .wrapper .menu-animation {
 .contact .wrapper form .input-area:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-box-shadow: 0 0 10px #e94560;
+          box-shadow: 0 0 10px #e94560;
 }
 
 @media only screen and (min-width: 768px) {
   .contact {
-    padding-bottom: 100px;
+    padding: 100px 0;
   }
   .contact .wrapper {
     border-radius: 20px;
@@ -690,7 +754,7 @@ nav .wrapper .menu-animation {
 }
 
 .footer {
-  background: #0f3460;
+  background: #1a1a2e;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -724,6 +788,7 @@ nav .wrapper .menu-animation {
 .footer .wrapper .help p a {
   text-decoration: underline;
   color: rgba(216, 216, 216, 0.822);
+  cursor: pointer;
 }
 
 .footer .wrapper .info {
@@ -854,7 +919,7 @@ nav .wrapper .menu-animation {
 }
 
 .about-us .about-us-banner {
-  background: url(./images/about-images/Bullseye-Gradient.svg);
+  background: #16213e;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -906,8 +971,8 @@ nav .wrapper .menu-animation {
 }
 
 .about-us .about-us-banner .wrapper .links .learn-more {
-  background: blue;
-  border: 1px solid blue;
+  background: #e94560;
+  border: 1px solid #e94560;
 }
 
 .about-us .about-us-banner .wrapper .links .discover {
@@ -915,7 +980,7 @@ nav .wrapper .menu-animation {
 }
 
 .about-us .about-us-info {
-  background: white;
+  background: #fdfbfb;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -950,11 +1015,12 @@ nav .wrapper .menu-animation {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -webkit-box-shadow: 2px 2px 15px silver;
-          box-shadow: 2px 2px 15px silver;
+  -webkit-box-shadow: 2px 2px 15px  #d6c8cbda;
+          box-shadow: 2px 2px 15px  #d6c8cbda;
   padding: 30px 20px;
   border-radius: 5px;
   margin-bottom: 50px;
+  background: white;
 }
 
 .about-us .about-us-info .wrapper .founder-card .img {
@@ -992,7 +1058,7 @@ nav .wrapper .menu-animation {
 .about-us .about-us-info .wrapper .info .title span {
   font-family: 'Satisfy', cursive;
   font-weight: bold;
-  color: blue;
+  color: #e94560;
 }
 
 .about-us .about-us-info .wrapper .info .links {
@@ -1017,14 +1083,14 @@ nav .wrapper .menu-animation {
 }
 
 .about-us .about-us-info .wrapper .info .links .read-more {
-  background: blue;
-  border: 1px solid blue;
+  background: #e94560;
+  border: 1px solid #e94560;
   color: white;
 }
 
 .about-us .about-us-info .wrapper .info .links .contact-us {
-  border: 1px solid blue;
-  color: blue;
+  border: 1px solid #e94560;
+  color: #e94560;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1131,6 +1197,7 @@ nav .wrapper .menu-animation {
 
 .testamonials {
   padding: 50px 0;
+  background: #fdfbfb;
 }
 
 .testamonials .wrapper {
@@ -1153,11 +1220,12 @@ nav .wrapper .menu-animation {
       -ms-flex-align: center;
           align-items: center;
   margin: 50px auto;
+  background: white;
   text-align: center;
   padding: 0px 10px 30px 10px;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 10px #919191;
-          box-shadow: 0px 0px 10px #919191;
+  -webkit-box-shadow: 0px 0px 10px rgba(104, 104, 104, 0.719);
+          box-shadow: 0px 0px 10px rgba(104, 104, 104, 0.719);
   color: #3b3b3b;
 }
 
@@ -1215,7 +1283,7 @@ nav .wrapper .menu-animation {
 .testamonials .wrapper .carousal .review-card .testamony .quote {
   display: block;
   margin: 5px;
-  fill: blue;
+  fill: #e94560;
 }
 
 .testamonials .wrapper .carousal .review-card .testamony .quote-top {
@@ -1231,7 +1299,8 @@ nav .wrapper .menu-animation {
 }
 
 .testamonials .slick-next:before, .testamonials .slick-prev::before {
-  color: blue;
+  color: #e94560;
+  opacity: 1;
 }
 
 * {

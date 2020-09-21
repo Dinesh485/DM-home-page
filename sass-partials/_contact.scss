@@ -2,10 +2,10 @@
 
 $colors:(
   font-color: white,
-  bg-color: #040440,
-  input-bg-color: #0e0e81,
+  bg-color:  #1a1a2e,
+  input-bg-color: #1a1a2e,
   info-color: rgb(231, 231, 231),
-  submit-btn-color: orange,
+  submit-btn-color: #e94560,
   submit-btn-arrow: white,
   placeholder-color: white,
 );
@@ -13,6 +13,7 @@ $colors:(
 
 .contact{
   padding: 50px 0;
+  background: #fdfbfb;
   .wrapper{
       background: map-get($map: $colors, $key: bg-color);
       color: map-get($map: $colors, $key: font-color);
@@ -22,6 +23,7 @@ $colors:(
       box-sizing: border-box;
       border-radius: 10px;
       max-width: 900px;
+      box-shadow: 0 0 10px rgba(56, 56, 56, 0.685);
     form{
       display: flex;
       flex-direction: column;
@@ -47,6 +49,7 @@ $colors:(
          align-items: center;
          border-radius: 10px;
          transition: transform 200ms linear;
+         border: 2px solid #e94560;
         input[type = text]{
           color: white;
           border-radius: 10px;
@@ -54,7 +57,7 @@ $colors:(
           border: none;
           outline: none;
           padding-right: 20px;
-         
+          
           padding: 10px;
         }
         ::placeholder{
@@ -71,6 +74,7 @@ $colors:(
           justify-content: center;
           border:none;
           background-color: map-get($map: $colors, $key: submit-btn-color);
+          cursor: pointer;
           .arrow{
             display: block;
             font-size: 1rem;
@@ -83,7 +87,7 @@ $colors:(
       }
       .input-area:hover{
         transform: scale(1.05);
-
+        box-shadow: 0 0 10px #e94560;
       }
     }
   }
@@ -91,7 +95,7 @@ $colors:(
 
 @media only screen and (min-width: 768px){
   .contact{
-    padding-bottom: 100px;
+    padding: 100px 0;
     .wrapper{
       border-radius: 20px;
      

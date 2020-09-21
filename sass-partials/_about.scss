@@ -1,11 +1,11 @@
 
 
 $colors:(
-  about-us-banner-bg: url(./images/about-images/Bullseye-Gradient.svg),
+  about-us-banner-bg: #16213e,
   about-us-banner-font-color: white,
   about-us-caption-color: rgb(216, 216, 216),
-  about-us-btn-color: blue,
-  about-us-info-bg: white,
+  about-us-btn-color: #e94560,
+  about-us-info-bg:#fdfbfb,
 );
 .about-us{
   position: static;
@@ -74,10 +74,11 @@ $colors:(
         flex-direction: column;
         align-items: center;
         text-align: center;
-        box-shadow: 2px 2px 15px  rgb(192, 192, 192);
+        box-shadow: 2px 2px 15px  #d6c8cbda;
         padding: 30px 20px;
         border-radius: 5px;
         margin-bottom: 50px;
+        background: white;
         .img{
           width: 70px;
           height: 70px;

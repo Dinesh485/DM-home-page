@@ -1,11 +1,14 @@
 
 $colors: (
   font-color: rgb(59, 59, 59),
-  quote-color: blue,
-  carousal-btn: blue,
+  quote-color:#e94560,
+  carousal-btn:#e94560 ,
+  card-bg: rgb(255, 255, 255),
 );
 .testamonials{
   padding: 50px 0;
+  background:#fdfbfb;
+
   .wrapper{
     max-width: 950px;
     margin: 0 auto;
@@ -18,11 +21,11 @@ $colors: (
       flex-direction: column;
       align-items: center;
       margin : 50px auto;
-         
+         background: map-get($map: $colors, $key: card-bg) ;
           text-align: center;
           padding: 0px 10px 30px 10px;
           border-radius: 10px;
-          box-shadow: 0px 0px 10px rgb(145, 145, 145);
+          box-shadow: 0px 0px 10px rgba(104, 104, 104, 0.719);
           color: map-get($map: $colors, $key: font-color);
       .customer-img{
         width: 70px;
@@ -80,6 +83,7 @@ $colors: (
   }
   .slick-next:before, .slick-prev::before{
   color: map-get($map: $colors, $key: carousal-btn) ;
+  opacity: 1;
 }
 }
 
