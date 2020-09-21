@@ -531,6 +531,10 @@ nav .wrapper .menu-animation {
   color: white;
 }
 
+.our-work .wrapper .work-card:last-child .description {
+  color: white;
+}
+
 @media only screen and (min-width: 576px) {
   .our-work .wrapper {
     -ms-grid-columns: 1fr 0.3fr 1fr;
