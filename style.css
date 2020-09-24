@@ -88,7 +88,7 @@ nav .wrapper-1 {
 }
 
 nav .wrapper-1 .logo {
-  width: 50px;
+  width: 200px;
 }
 
 nav .wrapper-1 .menu-btn {
@@ -278,6 +278,7 @@ nav .outer-wrapper {
   }
   nav .wrapper-1 .logo {
     margin-left: 20px;
+    width: 150px;
   }
   .nav-1 {
     height: -webkit-fit-content;
@@ -306,6 +307,9 @@ nav .outer-wrapper {
   nav .wrapper-1 .menu li {
     margin: 0 20px;
   }
+  nav .wrapper-1 .logo {
+    width: 200px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -315,6 +319,9 @@ nav .outer-wrapper {
   nav .wrapper-1 .menu li .demo-btn {
     font-size: 0.78rem;
     padding: 15px 20px;
+  }
+  nav .wrapper-1 .logo {
+    width: 250px;
   }
   nav .wrapper-2 .menu li a {
     font-size: 0.9rem;

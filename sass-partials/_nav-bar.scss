@@ -38,6 +38,7 @@ nav{
     height: fit-content;
     max-width: 1500px;
     display: none;
+
     a{
       color: white;
     }
@@ -71,7 +72,7 @@ nav{
     max-width: 1500px;
     margin: 0 auto;
     .logo{
-      width: 50px;
+      width: 200px;
       
     }
    .menu-btn{
@@ -225,7 +226,7 @@ nav{
 
        .logo{
          margin-left: 20px;
-        
+         width: 150px;
        }
      }
    }
@@ -253,6 +254,9 @@ nav{
           margin: 0 20px;
         }
       }
+      .logo{
+        width: 200px;
+      }
     }
   }
   
@@ -271,6 +275,9 @@ nav{
           padding: 15px 20px;
         }
         }
+      }
+      .logo{
+        width: 250px;
       }
     }
     .wrapper-2{
