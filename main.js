@@ -13,6 +13,30 @@ $(document).ready(() => {
     $(this).css({ transform: "scale(1.05)", "box-shadow": "0 0 10px #e94560" });
 
   });
+
+  let positionTop;
+  let wrapper = $('.nav-1 .outer-wrapper .wrapper-1')[0].getBoundingClientRect();
+  $(window).on("resize", () => {
+    wrapper = $('.nav-1 .outer-wrapper .wrapper-1')[0].getBoundingClientRect();
+  })
+
+  $(window).on("scroll", function () {
+    
+    let position = $('.nav-1')[0].getBoundingClientRect();
+     positionTop = position.top;
+    if (positionTop === 0) {
+     $(".nav-1 .outer-wrapper .wrapper-1").css({ "width": `${Math.floor(wrapper.width)}px` });
+     $('.nav-1 .outer-wrapper').css({ "width": "100%", "max-width": "100%"});
+      $(".nav-1 .outer-wrapper").css({"border-radius" : "0"});
+   } else {
+      
+     $("nav-1 .outer-wrapper .wrapper-1").css({ "width": `100%` });
+      $(".nav-1 .outer-wrapper").css({ "width": "80%", "max-width": "1500px" });
+       $(".nav-1 .outer-wrapper").css({ "border-radius": "10px" });
+   }
+  })
+   
+    
 });
 
 //carousal

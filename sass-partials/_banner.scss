@@ -16,107 +16,7 @@ $colors:(
 
 
 /*nav*/
-nav{
-   position: fixed;
-   width: 100%;
-   top: 0;
-   left : 0;
-   background: colors(banner-bg);
-   color: colors(banner-font-color);
-   display: flex;
-   justify-content: center;
-   height: fit-content;
-   width: 100%;
-   top:0;
-   padding: 5px 0;
-   z-index: 100;
- .wrapper{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-   width: 80%;
-  margin: 0 auto;
-    height: fit-content;
-    max-width: 1500px;
-    .logo{
-      width: 50px;
-    }
-   .menu-btn{
-     cursor: pointer;
-     width: 30px;
-     height: 30px;
-     box-sizing: border-box;
-     display: flex;
-     flex-direction: column;
-     justify-content:space-around;
-     align-items: center;
-     z-index: 10;
-     span{
-       width: 90%;
-       height: 4px;
-       display: block;
-       border-radius: 3px;
-       background: colors(menu-btn-color);
-       transform-origin: -3%;
-       transition: transform 300ms linear, opacity 300ms  linear;
-     
-     }
-     .menu-btn-color-change{
-       background: black;
-     }
-   }
-   
-   .menu-btn-animation-1{
-     transform: rotate(45deg);
-   }
-   .menu-btn-animation-2{
-     transform: translateX(-100%);
-     opacity: 0;
-     
-   }
-   .menu-btn-animation-3{
-      transform: rotate(-45deg);
-      
-   }
-   
-    .menu{
-      display: flex;
-      text-transform: capitalize  ;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      position: fixed;
-      height: 100vh;
-      width: 100%;
-      background: white;
-      top: 0;
-      left: 0;
-      transform: translateX(100%);
-      li{
-        margin: 10px;
-        a{
-          padding: 10px;
-          display: block;
-          color: black;
-          font-size: 1.3em;
-          font-weight: bold;
-        }
-        .demo-btn{
-          background: linear-gradient(to right, colors(accent-color1), colors(accent-color2));
-          border-radius: 35px;
-          padding: 20px 40px;
-          color: white;
-          font-size: 1.1em;
 
-        }
-      }
-    }
-    .menu-animation{
-     transform: translateX(0%)
-   }
- }
- 
-}
 
 /*banner */
 .banner{
@@ -125,7 +25,7 @@ nav{
    background-position: center;
    background-repeat: no-repeat ;
   color: colors(banner-font-color);
-  padding: 80px 0;
+  padding: 80px 0  ;
   position: relative;
   z-index: -10;
   .wrapper{
@@ -169,28 +69,22 @@ nav{
         .video{
           display: flex;
           align-items: center;
-          margin: 15px 10px;
+          margin: 15px 0px;
              .play-btn{
-               box-shadow: 0 0 0 0px gray;
-               animation-name: expand;
-               animation-iteration-count: infinite;
-               animation-duration: 1500ms;
-               animation-timing-function: ease-out;
-              
-               img{
-                 width: 15px;
-               }
-               padding: 20px;
-               border-radius: 50%;
-               background: rgba(92, 92, 92, 0.637);
-               width: fit-content;
-               display: flex;
-               align-items: center;
-               justify-content: center;
+              background: linear-gradient(to right, colors(accent-color1), colors(accent-color2));
+          border-radius: 35px;
+          padding: 15px 30px;
+          color: colors(banner-font-color);
+          text-transform: capitalize;
+          display: block;
+          width: fit-content;
+          animation: expand 1500ms ease;
+          animation-iteration-count: infinite; 
+          
              }
              @keyframes expand{
                0%{
-                 box-shadow:  0 0 0 0px gray;
+                 box-shadow:  0 0 0 0px colors(accent-color1);
                }
                50%{
                  box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
@@ -199,10 +93,7 @@ nav{
                   box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
                }
              }
-             span{
-               margin-left: 20px;
-               font-size: 0.9em;
-             }
+            
         }
     }
   }
@@ -248,41 +139,9 @@ nav{
 
 
 @media only screen and (min-width: 576px){
-  nav{
-    .wrapper{
-      .menu-btn{
-        display: none
-      }
-      .menu{
-        position: static;
-        width: fit-content;
-        height: fit-content;
-        display: flex;
-        flex-direction: row;
-        transform: none;
-        background: none;
-          
-        li{
-          margin: 0 10px;
-          a{
-            padding: 0;
-            font-size: 0.8em;
-            color: colors(banner-font-color);
-              font-weight: normal;
-        
-          }
-          .demo-btn{
-            font-size: 0.8em;
-            padding: 10px 15px;
-        
-          }
-        }
-      }
-    }
-  }
+ 
 
   .banner{
-    padding-top: 100px;
     .banner-img{
       width: 70%;
       align-self: center;
@@ -321,10 +180,8 @@ nav{
              font-size: 0.8em;
              margin-left: 30px;
              .play-btn{
-               padding: 20px;
-               img{
-                 width: 10px;
-               }
+              padding: 15px 30px;
+               
              }
            }
          }
@@ -335,22 +192,16 @@ nav{
        }
      }
    }
+
+   
 }
 @media only screen and (min-width: 992px){
   body{
     font-size: 18px;
   }
-  nav{
-    .wrapper{
-      .menu{
-        li{
-          margin: 0 20px;
-        }
-      }
-    }
-  }
+ 
   .banner{
-    padding: 130px 0;
+    padding: 70px 0 130px;
      .wrapper{
        .banner-content{
          
@@ -372,30 +223,26 @@ nav{
   body{
     font-size: 20px;
   }
-  nav{
-    .wrapper{
-      .menu{
-        li{
-          .demo-btn{
-          font-size: 0.78rem;
-          padding: 15px 20px;
-        }
-        }
-      }
-    }
-  }
+ 
   .banner{
-    padding-top: 150px;
+    padding-top: 100px;
     .wrapper{
       .banner-content{
         .caption{
           margin-bottom: 80px;
         }
-        .demo-btn{
-          padding: 20px 30px;
-
+        .links{
+          .demo-btn{
+                      padding: 20px 30px;
+          }
+          .video{
+            .play-btn{
+                        padding: 20px 30px;
+            }
+          }
         }
       }
+      
     }
   }
 }
